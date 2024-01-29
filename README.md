@@ -2,6 +2,22 @@
 
 Welcome to AdvancedWebScraper, your ultimate companion for web data extraction! Our mission is to offer flexible and efficient solutions tailored to suit diverse web scraping needs. With our powerful duo of scripts – `GeneralScraper.py` and `AdvancedScraper.py` – we cater to both beginners and experts alike. Let's dive into what makes each script unique and indispensable.
 
+Here's a comparison of the two code snippets in table format:
+
+| Feature / Aspect          | GeneralScraper.py   | AdvancedScraper.py     |
+|----------------------------|---------------------|-------------------------|
+| Framework                  | Requests & Beautiful Soup | Playwright             |
+| Network Resilience         | Exponential Backoff | handled by Playwright |
+| Scraping Method            | HTML Parser         | Browser Automation      |
+| Handling Relative Links    | `urljoin` function  | Built-in functionality   |
+| Realtime Page Rendering    | No                  | Yes                    |
+| JavaScript Support         | Limited              | Full                   |
+| Data Types                 | Posts, Links, Texts, Query | Enumerated types       |
+| Custom Tag Selection       | No                  | Yes                    |
+| Error Handling             | Print statements    | Print statements        |
+| Result Display             | Console printing    | Console printing        |
+| Saving Results            | Not implemented     | Multiple formats supported |
+| Usage                      | Simple, less powerful | More complex, more powerful |
 ## GeneralScraper.py
 
 Our entry-level scraper, perfect for those starting their journey in web data extraction. Built on top of popular libraries like `requests`, `BeautifulSoup`, and `urllib`, this script provides essential functionality while maintaining simplicity.
@@ -9,8 +25,8 @@ Our entry-level scraper, perfect for those starting their journey in web data ex
 ### Features
 - Easy-to-use interface guiding users through every step
 - Supports four primary data extraction modes:
-	+ Post content extraction (<p> tags)
-	+ Internal and external link collection (<a> tags with href attributes)
+	+ Post content extraction (`<p>` tags)
+	+ Internal and external link collection (`<a>` tags with href attributes)
 	+ All visible text content aggregation
 	+ Query-based search throughout the entire website
 
