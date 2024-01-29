@@ -1,104 +1,90 @@
 # AdvancedWebScraper
 
-## Overview
+Welcome to AdvancedWebScraper, your ultimate companion for web data extraction! Our mission is to offer flexible and efficient solutions tailored to suit diverse web scraping needs. With our powerful duo of scripts – `GeneralScraper.py` and `AdvancedScraper.py` – we cater to both beginners and experts alike. Let's dive into what makes each script unique and indispensable.
 
-**AdvancedWebScraper** is a comprehensive web scraping tool designed to empower users with versatile data extraction capabilities. This project consists of two robust scripts: `GeneralScraper.py` and `AdvancedScraper.py`. Each script offers distinct features and levels of customization, providing users with flexibility and efficiency for various web scraping tasks.
+## GeneralScraper.py
 
-### 1. GeneralScraper.py
+Our entry-level scraper, perfect for those starting their journey in web data extraction. Built on top of popular libraries like `requests`, `BeautifulSoup`, and `urllib`, this script provides essential functionality while maintaining simplicity.
 
-#### Description
+### Features
+- Easy-to-use interface guiding users through every step
+- Supports four primary data extraction modes:
+	+ Post content extraction (<p> tags)
+	+ Internal and external link collection (<a> tags with href attributes)
+	+ All visible text content aggregation
+	+ Query-based search throughout the entire website
 
-The `GeneralScraper.py` script simplifies web scraping tasks with an intuitive user interface. Key features include improved network resilience, support for multiple data types, and the ability to handle search queries. Users can extract text, links, or specific content from a webpage effortlessly.
+### Getting Started
+To start using [GeneralScraper.py](https://github.com/mshojaei77/AdvancedWebScraper/blob/main/GeneralScraper.PY), follow these steps:
 
-#### Usage
-
-1. **Run the script:**
-   ```bash
-   python GeneralScraper.py
-   ```
-2. **Enter the URL of the webpage.**
-3. **Choose the data type:**
-   - `0`: Extract all paragraphs (posts).
-   - `1`: Extract all links.
-   - `2`: Extract all text content.
-   - `3`: Search for a specific query in the text content.
-4. **For data type 3, enter the search query.**
-5. **View the scraped data.**
-
-### 2. AdvancedScraper.py
-
-#### Description
-
-The `AdvancedScraper.py` script elevates web scraping with asynchronous data extraction using Playwright. It supports various data types, custom HTML tags, and flexible output formats (print, text file, JSON, CSV). Users can input parameters for a highly customizable scraping experience.
-
-#### Usage
-
-1. **Run the script:**
-   ```bash
-   python AdvancedScraper.py
-   ```
-2. **Enter the URL of the webpage.**
-3. **Choose the data type:**
-   - `0`: Extract all paragraphs (posts).
-   - `1`: Extract all links.
-   - `2`: Extract all text content.
-   - `3`: Search for a specific query in the text content.
-   - `4`: Extract content based on a custom HTML tag.
-4. **For data types 3 and 4, enter the search query or custom HTML tag, respectively.**
-5. **Choose the output format:**
-   - `0`: Print results.
-   - `1`: Save results to a text file.
-   - `2`: Save results to JSON.
-   - `3`: Save results to CSV.
-6. **View or save the scraped data.**
-
-## Enhancing Output with DataSpeakGPT
-
-Users can further enhance and summarize their scraped data by feeding it into [DataSpeakGPT](https://github.com/mshojaei77/DataSpeakGPT), a powerful language model. DataSpeakGPT leverages GPT-3.5 Turbo for advanced natural language understanding and can provide valuable insights into the extracted content.
-
-## Dependencies
-
-- `requests`
-- `bs4` (Beautiful Soup)
-- `urllib.parse`
-- `time`
-- `asyncio`
-- `json`
-- `csv`
-- `enum`
-- `re`
-- `playwright`
-
-## Installation
-
-1. **Install Python (if not already installed).**
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Examples
-
-### GeneralScraper.py
-
+1. Ensure you have Python installed.
+2. Install necessary packages:
+```bash
+pip install requests beautifulsoup4
+```
+3. Run the script:
 ```bash
 python GeneralScraper.py
 ```
 
-### AdvancedScraper.py
+### Required Packages
+- [`requests==2.31.0`](https://pypi.org/project/requests/)
+- [`beautifulsoup4==4.12.2`](https://pypi.org/project/beautifulsoup4/)
 
-```bash
-python AdvancedScraper.py
-```
+### Usage
+1. Provide the target URL when prompted, ensuring it includes either "http://" or "https://".
+2. Select a data extraction method based on the options presented:
+	* 0: Extract post contents (typically <p> tags)
+	* 1: Gather internal & external links (<a> tags with href attribute)
+	* 2: Collect all visible text contents
+	* 3: Perform a query-based search across the whole website; input the desired query upon request
+3. View the extracted results according to your selection. No matching data? Don't worry—we display helpful messages too!
 
-## Contributing
-
-Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Happy responsible scraping! Always remember to adhere to site owners' terms and conditions. Explore wisely! 😊✨
 
 ---
 
-Enhance your web scraping capabilities with **AdvancedWebScraper**. Choose the level of customization that suits your needs and efficiently extract valuable data from web pages. After scraping, leverage the power of [DataSpeakGPT](https://github.com/mshojaei77/DataSpeakGPT) to further understand and summarize your extracted content. Happy scraping!
+## AdvancedScraper.py
+
+Unleash the full potential of web scraping with our cutting-edge solution powered by the renowned [Playwright library](https://github.com/microsoft/playwright-python). Designed specifically for experienced developers seeking intricate control over their projects, this script delivers unparalleled performance and adaptability.
+
+### Features ✨
+
+- Comprehensive support for five data extraction techniques:
+	+ Extract posts `(DataType.POSTS)`
+	+ Extract all links `(DataType.LINKS)`
+	+ Extract all texts `(DataType.ALL_TEXTS)`
+	+ Search by query `(DataType.SEARCH_QUERY)`
+	+ Custom tag extraction `(DataType.CUSTOM_TAG)`
+- Multiple output formats available:
+	+ Print `(OutputFormat.PRINT)`
+	+ Text File `(OutputFormat.TEXT_FILE)`
+	+ Json `(OutputFormat.JSON)`
+	+ CSV `(OutputFormat.CSV)`
+
+[AdvancedScraper](https://github.com/mshojaei77/AdvancedWebScraper/blob/main/AdvancedScraper.PY)
+
+### Requirements 📋
+
+- Python >= 3.7 or upper
+- [`playwright 1.41.1`](https://github.com/microsoft/playwright-python) package installed
+
+### Setup Instructions
+1. Meet the prerequisites:
+	* Python installation
+	* Access to the internet for downloading the required package
+2. Set up the environment:
+```bash
+pip install -U playwright
+```
+```bash
+playwright install
+```
+
+---
+
+## Contribution Guidelines
+We welcome contributions from anyone interested in enhancing our web scraping tools! To ensure seamless collaboration, please review our contribution guidelines carefully.
+
+## License
+Distributed under the MIT license. For more information, see [LICENSE](./LICENSE).
